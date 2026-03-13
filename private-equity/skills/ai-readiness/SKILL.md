@@ -4,11 +4,17 @@ description: Scan the portfolio for the highest-leverage AI opportunities and ra
 
 ## Workflow
 
-### Step 1: Ingest Portfolio Materials
+### Step 1: Connect to Portfolio Data
 
-- Accept quarterly updates, board decks, and financials for the portfolio (or a subset) — PDFs, PowerPoint, Excel, or a folder
-- For each company, extract: sector, revenue, headcount by function, tech stack mentioned, and any AI/automation initiatives already in flight
-- If the user provides a single company, still run the scan but skip the cross-portfolio ranking
+First, ask the user where the portfolio materials live. Don't assume — offer the options:
+
+- **MCP servers** — data room, SharePoint, Google Drive, or a portfolio-ops database if one is connected
+- **Local files** — a folder path on disk with quarterly decks, financials, board packs
+- **File uploads** — drag PDFs, PowerPoint, or Excel directly into the conversation
+
+Once connected, pull quarterly updates, board decks, and financials for the portfolio (or a subset). For each company, extract: sector, revenue, headcount by function, tech stack mentioned, and any AI/automation initiatives already in flight.
+
+If the user provides a single company, still run the scan but skip the cross-portfolio ranking.
 
 Ask up front if not obvious from materials:
 - Hold period remaining per company (AI payback matters less 12 months from exit)
